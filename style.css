@@ -16,8 +16,8 @@ body{
 }
 .container{
   background-color: #f6f8f9;
-    width: 91.5%;
-    height: 93vh;
+    width: auto;
+    height: auto;
     padding: 18px;
     color: black;
     background-image: url(image.png);

@@ -6,7 +6,7 @@ body {
 .container {
     max-width: 750px;
     background-image: linear-gradient(to top, #e0e7ea, #0c93c4);
-    height: 100vh;
+    height: auto;
     padding: 30px;
     width: auto;
 }

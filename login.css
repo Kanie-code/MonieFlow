@@ -27,12 +27,11 @@ body {
     font-size: 1.7rem;
     margin-top: 4rem;
     margin-bottom: 2rem;
+    display: block;
 }
 form .details {
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
-    align-items: center;
 }
 input {
     margin-bottom: 2rem;
@@ -44,8 +43,11 @@ input {
     margin-top: 2rem;
     padding: 10px 6px 10px 6px ;
     width: 140px;
-    background-color: rgb(2, 2, 129);
+    background-color: rgb(27, 27, 170);
     color: #ffff;
     border-radius: 8px;
     border: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
