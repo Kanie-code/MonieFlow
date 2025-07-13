@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phone Validation</title>
+  <style>
+    input {
+      font-size: 1.2rem;
+      padding: 10px;
+      margin-top: 10px;
+      width: 300px;
+    }
+
+    input:invalid:not(:placeholder-shown) {
+      border: 3px solid red;
+    }
+
+    input:valid:not(:placeholder-shown) {
+      border: 3px solid green;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="phone">Phone Number (Nigeria):</label><br/>
+  <input
+    type="text"
+    id="phone"
+    name="phone"
+    placeholder="Enter phone number"
+    pattern="^(\+234[ -]?)?0?(7[0-9]|8[0-9]|9[0-1])[ -]?[0-9]{3}[ -]?[0-9]{4}$" required>
+
+</body>
+</html>

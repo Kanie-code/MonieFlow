@@ -1,0 +1,63 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container1 {
+  background-image: linear-gradient(to top, #f6f8f9, #040650);
+  display: flex;
+  flex-direction: column;
+  color: #f6f8f9;
+  max-width: 550px;
+  text-align: center;
+  padding: 15px;
+  width: auto;
+}
+.container{
+  background-color: #f6f8f9;
+    width: 91.5%;
+    height: 93vh;
+    padding: 18px;
+    color: black;
+    background-image: url(image.png);
+    margin: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;           /* Distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  display: flex;
+  gap: 15px;               /* Space between buttons */
+  z-index: 9999;           /* Keep above other elements */
+}
+
+.floating-buttons button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.floating-buttons button:hover {
+  background-color: #0056b3;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

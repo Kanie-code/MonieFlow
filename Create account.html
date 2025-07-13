@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="create account.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <form action="login.html">
+                <button class="login" type="submit">Log In</button>
+            </form>
+        </div>
+
+        <div class="signup">
+            Sign Up For MonieFlow
+        </div>
+        <form class="details">
+            <label>
+                First Name:
+                <input type="text" required placeholder="Enter your first name" name="name">
+            </label>
+            <label>
+                Last Name:
+                <input type="text" required placeholder="Enter your last name" name="surname">
+            </label>
+            <label>
+                Username:
+                <input type="text" placeholder="Create username" name="username" autocomplete="username"
+                autocapitalize="none" spellcheck="false" pattern="^[0-9a-zA-Z](?:[0-9A-Za-z]|[._](?![_.])){2,18}[0-9a-zA-Z]" required>
+            </label>
+            <label>
+                Email:
+                <input type="email" required placeholder="Enter your email address" name="Email">
+            </label>
+            <label>
+                Phone:
+                <input type="tel" placeholder="Enter your phone number" name="phone" pattern="(\+234(-| )?)?0?[7-9][01][0-9](-| )?[0-9]{3}(-| )?[0-9]{4}" required>
+            </label>
+            <label>
+                Password:
+                <input type="password" required placeholder="Create password" name="password">
+            </label>
+            <label>
+                Password:
+                <input type="password" required placeholder="Confirm password">
+            </label>
+            <button type="submit" class="next-btn">
+                Next
+            </button>
+        </form>
+    </div>
+</body>
+</html>
