@@ -1,14 +1,16 @@
 body {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
 }
 .container {
-    max-width: 750px;
+    max-width: 550px;
     background-image: linear-gradient(to top, #e0e7ea, #0c93c4);
     height: auto;
     padding: 30px;
-    width: auto;
+    width: 100%;
 }
 .login {
     float: right;
@@ -23,6 +25,7 @@ body {
 form .details {
     display: flex;
     flex-direction: column;
+    
 }
 .signup {
     text-align: center;
@@ -59,7 +62,7 @@ input:invalid:not(:placeholder-shown){
 }
 input{
     border-radius: 4px;
-    width: 250px;
+    width: 90%;
     height: 30px;
     border: 1px solid black;
 }

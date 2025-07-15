@@ -8,7 +8,7 @@ body {
     background-image: linear-gradient(to top, #e0e7ea, #0c93c4);
     height: 100vh;
     padding: 30px;
-    width: auto;
+    width: 100%;
 }
 .signup {
     float: right;
@@ -38,6 +38,11 @@ input {
     border-radius: 12px;
     padding: 10px;
     width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .login-btn {
     margin-top: 2rem;

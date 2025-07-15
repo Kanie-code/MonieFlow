@@ -5,57 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div style="margin-bottom: 20px;">
-        <div style="font-size: larger; font-weight: 550; display: block; text-align: center;">
-            Welcome to <span style="color: aqua;"> <strong>MonieFlow</strong></span>
+    <div class="first-Container">
+        <div style="margin-bottom: 20px;" class="upper-page">
+        <div>
+           <i id="optionBar" class="fas fa-bars" style="font-size: 1.4rem;margin-bottom: 0; margin-top: 8px;"></i>
+           <div class="side-btn" id="sideBtns">
+                <button id="getStartedBtn">Get Started</button>
+                <button id="loginBtn">Login</button>
+                <button id="aboutUsBtn">About Us</button>
+                <button id="keyFeaturesBtn">Key Features</button>
+                <button id="contactUsBtn">Contact Us</button>
+                <button id="helpBtn">Help</button>
+           </div>
         </div>
         <div>
-            Your Secure and Convenient Cash Exchange Solution.
+            <div style="font-size: larger; font-weight: 550; display: block; text-align: center;">
+                Welcome to <span style="color: aqua;"> <strong>MonieFlow</strong></span>
+            </div>
+            <div>
+                Your Secure and Convenient Cash Exchange Solution.
+            </div>
         </div>
     </div>
-    <div class="container1">
-        <div style="margin-bottom: -3px;">
+    </div>
+    <div class="container1" id="container1">
+        <div style="margin-bottom: -3px;" class="top">
+            <div>
+                <div class="large">
+                    Simplify Your Cash Exchange In Real Life
+                </div>
+                <div class="small">
+                    Exchange, deposit and handle cash in real life &mdash; with digital ease.
+                </div>
+                <form action="Create account.html" style="margin-top: 15px;">
+                    <button class="get-started" type="submit">Get Started</button>
+                </form>
+            </div>
             <img src="gif.GIF">
         </div>
         <div class="container">
-            <div>
-                Our Goal is to provide a seamless and trustworthy platform for cash seekers 
-                and cash bearers to connect and exchange money securely, 
-                without the need for long-distance travel or high deposit fees.
+            <div id="aboutUsArea">
+                <div>
+                    <div class="about-heading">
+                        <i class="fas fa-bullseye"></i>
+                        <div class="about-heading-text">Our Goal</div>
+                    </div>
+                    <div>
+                        To provide a seamless and trustworthy platform for cash seekers 
+                        and cash bearers to connect and exchange money securely, 
+                        without the need for long-distance travel or high deposit fees.
+                    </div>
+                </div>
+                <div style="margin-top: 2em;">
+                    <div class="about-heading">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="about-heading-text">Our Motto</div>
+                    </div>
+                    <div>
+                        Cash in your hands, without the hassle.
+                    </div>
+                </div>
+                <div style="margin-top: 2em;">
+                    <div class="about-heading">
+                        <i class="fas fa-cogs"></i>
+                        <div class="about-heading-text">How It Works</div>
+                    </div>
+                    <div>
+                        Whether you need cash or want to deposit it, MonieFlow connects you 
+                        with nearby cash bearers and seekers. With a few simple steps, 
+                        you can safely receive or give cash while avoiding unnecessary charges 
+                        or trips to distant POS locations.
+                    </div>
+                </div>
             </div>
-            <div style="margin-top: 2em;">
-                Our Motto:
-                “Cash in your hands, without the hassle.
+            <div class="features" id="keyFeaturesArea">
+                <h1 style="margin-bottom: 0; margin-top: 2em; color: rgb(19, 19, 105);">Key Features:</h1>
+                <div class="feature-row">
+                    <div>
+                        <div class="feature-heading">
+                            <i class="fas fa-handshake"></i>
+                            <strong>Convenient Cash Exchange</strong>
+                        </div>
+                        <div class="write-up">
+                            No need to leave your home. Simply find someone nearby 
+                            and complete your transaction safely.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="feature-heading">
+                            <i class="fas fa-sync"></i>
+                            <strong>Real-Time Matching</strong>
+                        </div>
+                        <div class="write-up">
+                            Find users who need or have 
+                            cash in your area, and get matched immediately.
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <div>
+                        <div class="feature-heading">
+                            <i class="fas fa-lock"></i>
+                            <strong>Security First</strong>
+                        </div>
+                        <div class="write-up">
+                            Video verification of transactions and reviews to ensure
+                            trustworthiness for both parties.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="feature-heading">
+                            <div class="low-fee">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <strong>No Fees For Cash Depositors</strong>
+                        </div>
+                        <div class="write-up">
+                            Enjoy a platform that helps you deposit cash without 
+                            paying additional fees or travel expenses.
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <div>
+                        <div class="feature-heading">
+                            <i class="fas fa-percent"></i>
+                            <strong>Low Fees For Cash Seekers</strong>
+                        </div>
+                        <div class="write-up">
+                            Enjoy a platform that helps you withdraw cash with very
+                            low additional fees and travel expenses.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="feature-heading">
+                            <i class="fas fa-headset"></i>
+                            <strong>24/7 Support</strong>
+                        </div>
+                        <div class="write-up">
+                            Get help anytime with our support team who are available
+                            around the clock.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div style="margin-top: 2em;">
-                How It Works:
-                Whether you need cash or want to deposit it, MonieFlow connects you 
-                with nearby cash bearers and seekers. With a few simple steps, 
-                you can safely receive or give cash while avoiding unnecessary charges 
-                or trips to distant POS locations.
-
-            </div>
-            <ul>
-                <h1>Key Features:</h1>
-                <li style="margin-top: 0.5em;"><strong>Convenient Cash Exchange:</strong> No need to leave your 
-                    home. Simply find someone nearby and complete your transaction 
-                    safely.
-                </li>
-                <li style="margin-top: 2em;"><strong>Real-Time Matching:</strong> Find users who need or have 
-                    cash in your area, and get matched immediately.
-                </li>
-                <li style="margin-top: 2em;"><strong>Security First:</strong> Video verification of 
-                    transactions and reviews to ensure trustworthiness for both parties.
-                </li>
-                <li style="margin-top: 2em;"><strong>No Fees For Cash Depositors</strong> Enjoy a platform 
-                    that helps you deposit cash without paying additional fees or travel expenses.
-                </li>
-                <li style="margin-top: 2em;"><strong>Low Fees For Cash Seekers</strong> Enjoy a platform 
-                    that helps you withdraw cash with very low additional fees and travel expenses.
-                </li>
-            </ul>
             <div class="floating-buttons">
                 <form action="login.html">
                     <button class="login-btn" type="submit">Login</button>
@@ -66,5 +163,9 @@
             </div>
         </div>
     </div>
+    <button class="scroll-up-btn" id="scrollUpBtn">
+        <i class="fas fa-arrow-up" style="font-size: medium; font-weight: 700;"></i>
+    </button>
 </body>
+<script src="script.js"></script>
 </html>
