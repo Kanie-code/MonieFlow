@@ -1,12 +1,11 @@
 body {
     display: flex;
-    justify-content: flex-start;
     font-family: sans-serif;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 .container {
-    max-width: 550px;
+    max-width: 750px;
     background-image: linear-gradient(to top, #e0e7ea, #0c93c4);
     height: auto;
     padding: 30px;
@@ -62,7 +61,10 @@ input:invalid:not(:placeholder-shown){
 }
 input{
     border-radius: 4px;
-    width: 90%;
+    width: 100%;
     height: 30px;
     border: 1px solid black;
+}
+button {
+    cursor: pointer;
 }

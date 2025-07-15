@@ -15,11 +15,13 @@ document.addEventListener("DOMContentLoaded" , () => {
 
     optionBar.addEventListener('click' , () => {
         sideBtns.classList.toggle('active');
+        optionBar.classList.toggle('clicked');
     })
 
 
     container1.addEventListener('click' , () => {
         sideBtns.classList.remove('active');
+        optionBar.classList.remove('clicked');
     })
 
 
