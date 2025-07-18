@@ -27,9 +27,12 @@
             </div>
         </div>
         <div class="balance-area">
-            <div style="display: flex; flex-direction: column; gap: 18px;">
-                <div>Available Balance <i class="fas fa-eye"></i></div>
-                <div id="balance">₦</div>
+            <div style="display: flex; flex-direction: column; gap: 18px;" id="balanceSide">
+                <div>Available Balance <i id="balanceShow" class="fas fa-eye"></i></div>
+                <div class="balance">
+                    <div id="balance" class="hide">₦</div>
+                    <div id="balanceStars">****</div>
+                </div>
             </div>
             <div style="display: flex; flex-direction: column; gap: 18px;">
                 <div>Transaction History ></div>
