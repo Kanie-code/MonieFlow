@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile pic.css">
+</head>
+<body>
+    <div class="container">
+        <div style="margin-top: 6rem;">
+            <img class="image" id="image" src="blank-pic.webp" style="height: 270px; width: 270px; margin-top: 10px;">
+        </div>
+        <div class="add-pic-area">
+            <button id="addPicBtn">
+                Add a profile picture
+            </button>
+        </div>
+        <div class="upload-area">
+            <div class="file-upload" id="fileUpload">
+                <label for="imageInput" id="device">
+                        Choose from device
+                </label>
+                <label for="cameraInput" id="camera">
+                        Open camera
+                </label>
+            </div>
+            <input type="file" accept="image/*" id="imageInput" style="display: none;">
+            <input type="file" accept="image/*" id="cameraInput" capture="user" style="display: none;">
+        </div>
+        <div class="actions">
+            <div class="skip" style="cursor: pointer;" id="skip">
+                Skip
+            </div>
+            <div class="done" style="cursor: pointer;" id="done">
+                Done
+            </div>
+        </div>
+    </div>
+</body>
+<script src="create account.js"></script>
+</html>

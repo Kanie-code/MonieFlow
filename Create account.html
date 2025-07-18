@@ -20,37 +20,38 @@
         <form class="details">
             <label>
                 First Name:
-                <input type="text" required placeholder="Enter your first name" name="name">
+                <input id="firstName" type="text" required placeholder="Enter your first name" name="name">
             </label>
             <label>
                 Last Name:
-                <input type="text" required placeholder="Enter your last name" name="surname">
+                <input id="lastName" type="text" required placeholder="Enter your last name" name="surname">
             </label>
             <label>
                 Username:
-                <input type="text" placeholder="Create username" name="username" autocomplete="username"
+                <input id="userName" type="text" placeholder="Create username" name="username" autocomplete="username"
                 autocapitalize="none" spellcheck="false" pattern="^[0-9a-zA-Z](?:[0-9A-Za-z]|[._](?![_.])){2,18}[0-9a-zA-Z]" required>
             </label>
             <label>
                 Email:
-                <input type="email" required placeholder="Enter your email address" name="Email">
+                <input id="email" type="email" required placeholder="Enter your email address" name="Email">
             </label>
             <label>
                 Phone:
-                <input type="tel" placeholder="Enter your phone number" name="phone" pattern="(\+234(-| )?)?0?[7-9][01][0-9](-| )?[0-9]{3}(-| )?[0-9]{4}" required>
+                <input id="phone" type="tel" placeholder="Enter your phone number" name="phone" pattern="(\+234(-| )?)?0?[7-9][01][0-9](-| )?[0-9]{3}(-| )?[0-9]{4}" required>
             </label>
             <label>
                 Password:
-                <input type="password" required placeholder="Create password" name="password">
+                <input id="password" type="password" required placeholder="Create password" name="password">
             </label>
             <label>
                 Password:
-                <input type="password" required placeholder="Confirm password">
+                <input type="password" id="confirmPassword" required placeholder="Confirm password">
             </label>
-            <button type="submit" class="next-btn">
+            <button type="button" class="next-btn" id="nextBtn">
                 Next
             </button>
         </form>
     </div>
 </body>
+<script src="create account.js"></script>
 </html>
