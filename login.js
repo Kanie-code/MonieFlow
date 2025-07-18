@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded' , () => {
             return;
         }
         saveProfile(user);
-        window.location.href = 'main page.html';
+        window.location.href = 'main-page.html';
     }
 
 
