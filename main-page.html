@@ -10,103 +10,178 @@
 <body>
     <div class="container">
         <div class="nav-bar">
-            <div style="margin-left: 20px;"><i class="fas fa-home"></i></div>
-            <div><i class="fas fa-user"></i></div>
-            <div style="margin-right: 20px;"><i class="fas fa-history"></i></div>
+            <div class="home clicked" id="home" style="margin-left: 20px;"><i class="fas fa-home"></i></div>
+            <div class="history" id="history"><i class="fas fa-history"></i></div>
+            <div class="user" id="user" style="margin-right: 20px;"><i class="fas fa-user"></i></div>
         </div>
-        <div class="Profile-area">
-            <div class="profile-top">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <img id="img" style="width: 50px; height: 50px; border-radius: 50%;">
-                    <div id="welcomeMessage">Welcome</div>
+        <div class="home-area" id="homeArea">
+            <div class="Profile-area">
+                <div class="profile-top">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img id="img" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div id="welcomeMessage">Welcome</div>
+                    </div>
+                    <div style="display: flex; gap: 25px;">
+                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-bell"></i>
+                    </div>
                 </div>
-                <div style="display: flex; gap: 25px;">
-                    <i class="fas fa-headset"></i>
-                    <i class="fas fa-bell"></i>
+            </div>
+            <div class="balance-area">
+                <div style="display: flex; flex-direction: column; gap: 18px;" id="balanceSide">
+                    <div>Available Balance <i id="balanceShow" class="fas fa-eye"></i></div>
+                    <div class="balance">
+                        <div id="balance" class="hide">₦</div>
+                        <div id="balanceStars">****</div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px;">
+                    <div>Transaction History ></div>
+                    <button>Deposit+</button>
+                </div>
+            </div>
+            <div class="actions-area">
+                <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
+                    <div><i class="fas fa-wallet"></i><i class="fas fa-arrow-up"></i></div>
+                    <div>Deposit Cash</div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
+                    <div><i class="fas fa-hand-holding-usd"></i></div>
+                    <div>Get Cash</div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
+                    <div><i class="fas fa-wallet"></i><i class="fas fa-arrow-down"></i></div>
+                    <div>Withdraw</div>
+                </div>
+            </div>
+            <div class="services-area">
+                <div style=" display: flex; justify-content: space-between; flex-direction: column;">
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-signal"></i></div>
+                        <div>Airtime</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-wifi"></i></div>
+                        <div>Data</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-tv"></i></i></div>
+                        <div>TV</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-piggy-bank"></i></div>
+                        <div>Save</div>
+                    </div>
+                </div>
+                <div style=" display: flex; justify-content: space-between; flex-direction: column;">
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-football-ball"></i></div>
+                        <div>Betting</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-bolt"></i></div>
+                        <div>Eletricity</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-plane"></i></div>
+                        <div>Flight</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-shopping-cart"></i></div>
+                        <div>Shop</div>
+                    </div>
+                </div>
+                <div style=" display: flex; justify-content: space-between; flex-direction: column;
+                gap: 55px;">
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-bullhorn"></i></div>
+                        <div>Refer</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-credit-card"></i></div>
+                        <div>Ticket</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-trash"></i></div>
+                        <div>Waste bill</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <div><i class="fas fa-list"></i></div>
+                        <div>More</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="balance-area">
-            <div style="display: flex; flex-direction: column; gap: 18px;" id="balanceSide">
-                <div>Available Balance <i id="balanceShow" class="fas fa-eye"></i></div>
-                <div class="balance">
-                    <div id="balance" class="hide">₦</div>
-                    <div id="balanceStars">****</div>
+        <div class="user-area hide" id="userArea">
+            <div class="user-top">
+                <div class="user-top-up">
+                    <div>Hi</div>
+                    <div><i style="font-size: larger;" class="fas fa-cog"></i></div>
+                </div>
+                <div class="user-top-down">
+                    <div>Total Balance <i id="viewTotalBalance" class="fas fa-eye"><div id="slash" class="slash">/</div></i></div>
+                    <div class="total-balance">
+                        <div class="hide" id="totalBalance">₦</div>
+                        <div id="TotalbalanceStars">****</div>
+                    </div>
                 </div>
             </div>
-            <div style="display: flex; flex-direction: column; gap: 18px;">
-                <div>Transaction History ></div>
-                <button>Deposit+</button>
-            </div>
-        </div>
-        <div class="actions-area">
-            <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
-                <div><i class="fas fa-wallet"></i><i class="fas fa-arrow-up"></i></div>
-                <div>Deposit Cash</div>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
-                <div><i class="fas fa-hand-holding-usd"></i></div>
-                <div>Get Cash</div>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
-                <div><i class="fas fa-wallet"></i><i class="fas fa-arrow-down"></i></div>
-                <div>Withdraw</div>
-            </div>
-        </div>
-        <div class="services-area">
-            <div style=" display: flex; justify-content: space-between; flex-direction: column;">
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-signal"></i></div>
-                    <div>Airtime</div>
+            <div class="user-main">
+                <div id="myProfile">
+                    <div>
+                        <div><i class="fas fa-user"></i></div>
+                        <div>My profile</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-wifi"></i></div>
-                    <div>Data</div>
+                <div id="transactionHistory">
+                    <div>
+                        <div><i class="fas fa-history"></i></div>
+                        <div>Transaction history</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-tv"></i></i></div>
-                    <div>TV</div>
+                <div id="settings">
+                    <div>
+                        <div><i class="fas fa-cog"></i></div>
+                        <div>Settings</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-piggy-bank"></i></div>
-                    <div>Save</div>
+                <div id="invitation">
+                    <div>
+                        <div><i class="fas fa-bullhorn"></i></div>
+                        <div>Invitation</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
-            </div>
-            <div style=" display: flex; justify-content: space-between; flex-direction: column;">
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-football-ball"></i></div>
-                    <div>Betting</div>
+                <div>
+                    <div id="security">
+                        <div><i class="fas fa-lock"></i></div>
+                        <div>Security center</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-bolt"></i></div>
-                    <div>Eletricity</div>
+                <div id="customerService">
+                    <div>
+                        <div><i class="fas fa-headset"></i></div>
+                        <div>Customer service center</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-plane"></i></div>
-                    <div>Flight</div>
+                <div id="rate">
+                    <div>
+                        <div><i class="fas fa-star"></i></div>
+                        <div>Rate us</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-shopping-cart"></i></div>
-                    <div>Shop</div>
-                </div>
-            </div>
-            <div style=" display: flex; justify-content: space-between; flex-direction: column;
-            gap: 55px;">
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-bullhorn"></i></div>
-                    <div>Refer</div>
-                </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-credit-card"></i></div>
-                    <div>Ticket</div>
-                </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-trash"></i></div>
-                    <div>Waste bill</div>
-                </div>
-                <div style="display: flex; flex-direction: column; text-align: center;">
-                    <div><i class="fas fa-list"></i></div>
-                    <div>More</div>
+                <div id="logOut">
+                    <div>
+                        <div><i class="fas fa-sign-out-alt"></i></div>
+                        <div>log out</div>
+                    </div>
+                    <div><i style="font-size: small; color: gray" class="fas fa-chevron-right"></i></div>
                 </div>
             </div>
         </div>

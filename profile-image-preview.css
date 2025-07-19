@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    max-width: 550px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+img {
+    height: auto;
+    width: auto;
+    margin: 0;
+}

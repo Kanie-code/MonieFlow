@@ -10,7 +10,7 @@ body{
   display: flex;
   flex-direction: column;
   max-width: 550px;
-  padding: 15px;
+  padding: 0 15px 15px 15px;
   position: relative;
   height: auto;
   width: 100%;
@@ -25,7 +25,7 @@ body{
     max-width: 550px;
     width: 100%;
     bottom: 0px;
-    padding: 15px;
+    height: 80px;
     
     color: #ffff;
     left: 50%;
@@ -69,6 +69,89 @@ button {
   border: 0;
   padding: 7px;
 }
-.hide {
+.container .hide {
   display: none;
+}
+.nav-bar .clicked {
+  background-color: rgb(86, 85, 85);
+  padding: 8px;
+  border-radius: 4px;
+}
+.container > .hide {
+  display: none;
+}
+.user-top-up {
+  display: flex;
+  justify-content: space-between;
+}
+.user-top-down {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.user-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px;
+  border-radius: 8px;
+  margin: 5px 5px;
+  width: auto;
+  background-image: linear-gradient(to top , #85C4DA , #0c93c4);
+  position: sticky;
+  top: 9px;
+}
+.user-main > div > div:first-child {
+    display: flex;
+    gap: 20px;
+}
+.user-main > div {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 25px;
+    margin: 0 15px;
+    border-radius: 10px;
+}
+.user-main > div:hover {
+  background-color: #b5b3b3;
+}
+.user-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.user-main i {
+  color: #0c93c4;
+  font-size: larger;
+}
+.nav-bar > div:hover {
+  font-size: 0.8em;
+}
+.nav-bar > div {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+.total-balance .hide {
+  display: none;
+}
+.slash {
+  position: absolute;
+  font-size: 2em;
+  font-weight: bold;
+  top: -55%;
+  transform: translateY(100%);
+  left: 25%;
+  transform: rotate(15deg);
+  display: none;
+}
+.user-top-down .show {
+  display: block;
+}
+#viewTotalBalance {
+  position: relative;
 }
