@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded' , () => {
     balanceShow.addEventListener('click', () => hideBalance());
 
 
+    img.addEventListener('click' , () => {
+        window.location.href = 'profile-page.html'
+    });
+
+
+    img.style.cursor = 'pointer'
+
+
     balanceShow.style.cursor = 'pointer'
 
 
