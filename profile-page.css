@@ -5,7 +5,7 @@ body {
     justify-content: center;
 }
 .container {
-    max-width: 750px;
+    max-width: 550px;
     background-image: linear-gradient(to top, #e0e7ea, #0c93c4);
     height: 100vh;
     padding: 20px;

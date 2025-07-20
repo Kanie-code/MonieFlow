@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="username-edit-page.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit your username</h1>
+        <label>
+            Username:
+            <input id="userName" type="text" placeholder="New username" name="username" autocomplete="username"
+            autocapitalize="none" spellcheck="false" pattern="^[0-9a-zA-Z](?:[0-9A-Za-z]|[._](?![_.])){2,18}[0-9a-zA-Z]" required>
+        </label>
+        <button id="doneBtn">Done</button>
+    </div>
+</body>
+<script src="username-edit-page.js"></script>
+</html>

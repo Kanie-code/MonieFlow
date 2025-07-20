@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     const welcomeMessage = document.getElementById('welcomeMessage');
     const balanceStars = document.getElementById('balanceStars');
     const img = document.getElementById('img');
+    const greeting = document.getElementById('greeting');
     let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
 
     if(!logedInProfile){
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         return;
     }
 
+        greeting.textContent += ' ' + logedInProfile.pFirstName;
         img.src = logedInProfile.pImage;
         welcomeMessage.textContent += ` ${logedInProfile.pFirstName},`
         balance.textContent += logedInProfile.pBalance;

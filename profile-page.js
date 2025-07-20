@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded' , () => {
         }
 
 
+        change.addEventListener('click' , () => {
+            window,location.href = 'picture-edit-page.html'
+        })
+
 
         if (logedInProfile.pGender){
             gender.textContent = logedInProfile.pGender;
@@ -76,5 +80,23 @@ document.addEventListener('DOMContentLoaded' , () => {
         view.addEventListener('click' , () => {
             window.location.href = 'profile-image-preview.html'
         })
+
+        userName.addEventListener('click' , () => {
+            window.location.href='username-edit-page.html';
+        })
+
+        email.addEventListener('click' , () => {
+            window.location.href ='email-edit-page.html';
+        })
+
+        phone.addEventListener('click' , () => {
+            window.location.href='phone-edit-page.html';
+        })
+
+        userName.style.cursor ='pointer';
+        email.style.cursor ='pointer';
+        phone.style.cursor ='pointer';
+        address.style.cursor ='pointer';
+        nickName.style.cursor ='pointer';
 
 })
