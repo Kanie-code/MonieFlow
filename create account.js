@@ -69,8 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const image = document.getElementById('image');
         const done = document.getElementById('done');
         const skip = document.getElementById('skip');
+        const container = document.getElementById('container');
 
-        addPicBtn.addEventListener('click', () => {
+        addPicBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             fileUpload.classList.toggle('clicked');
         });
 
@@ -81,6 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
         camera.addEventListener('click', () => {
             fileUpload.classList.remove('clicked');
         });
+
+        container.addEventListener('click' , () => {
+            if(fileUpload.classList.contains('clicked')){
+                fileUpload.classList.remove('clicked');
+            }
+        }) 
 
         function handleImageSelect(e) {
             const file = e.target.files[0];

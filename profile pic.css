@@ -19,6 +19,7 @@ body{
 }
 .image {
     border-radius: 50%;
+    border: 5px solid gray;
 }
 .add-pic-area {
     margin-top: 70px;
@@ -31,6 +32,7 @@ button {
     font-size: 1rem;
     background-color: rgb(27, 27, 170);
     color: #ffff;
+    cursor: pointer;
 }
 .actions {
     position: sticky;
@@ -48,27 +50,22 @@ button {
 }
 .upload-area .clicked {
     display: flex;
-    flex-direction: column;
-    background-color: #ffff;
-    margin: 7px 130px;
-    gap: 7px;
-    font-size: clamp(14px, 2vw, 18px);
-    padding: 10px;
-    opacity: 1;
-    transition: opacity 0.7s ease;
 }
 label{
     border: 1px solid black;
+    padding: 2px;
+    border-radius: 4px;
     cursor: pointer;
 }
 .file-upload {
-    display: flex;
+    position: absolute;
+    bottom: 21.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffffa6;
+    display: none;
     flex-direction: column;
-    background-color: #ffff;
-    margin: 7px 130px;
-    gap: 7px;
-    font-size: large;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.7s ease;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
 }

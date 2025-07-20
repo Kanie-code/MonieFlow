@@ -8,10 +8,14 @@
         const imageInput = document.getElementById('imageInput');
         const image = document.getElementById('image');
         const done = document.getElementById('done');
+        const container = document.getElementById('container');
         let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
         let profiles = JSON.parse(localStorage.getItem('profiles-created'));
 
-        addPicBtn.addEventListener('click', () => {
+        image.src=logedInProfile.pImage;
+
+        addPicBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             fileUpload.classList.toggle('clicked');
         });
 
@@ -36,6 +40,12 @@
                 alert("You haven't selected any picture");
             }
         }
+
+        container.addEventListener('click' , () => {
+            if(fileUpload.classList.contains('clicked')){
+                fileUpload.classList.remove('clicked');
+            }
+        }) 
 
         cameraInput.addEventListener('change', handleImageSelect);
         imageInput.addEventListener('change', handleImageSelect);
