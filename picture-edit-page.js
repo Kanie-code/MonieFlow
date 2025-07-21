@@ -13,6 +13,11 @@
         let profiles = JSON.parse(localStorage.getItem('profiles-created'));
 
         image.src=logedInProfile.pImage;
+        
+        image.addEventListener('click' , (e) => {
+            e.stopPropagation()
+            window.location.href = 'profile-image-preview.html'
+        })
 
         addPicBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -51,6 +56,10 @@
         imageInput.addEventListener('change', handleImageSelect);
 
         done.addEventListener('click', () => {
+            if(image.src === logedInProfile.pImage){
+                confirm('You have not added a different picture');
+                return;
+            }
             updateUserProfile();
             updateLoggedInProfile();
             window.location.replace('profile-page.html');

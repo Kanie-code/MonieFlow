@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded' , () => {
         return;
     }
 
+    phone.focus();
+
     function normalizePhone(phone) {
             let digits = phone.replace(/\D/g, '');
             return digits.slice(-10);
@@ -16,10 +18,14 @@ document.addEventListener('DOMContentLoaded' , () => {
 
 
     doneBtn.addEventListener('click' , () => {
-         if (!phone.checkValidity()) {
-                phone.reportValidity();
-                return;
-            }
+        if (!phone.checkValidity()) {
+            phone.reportValidity();
+            return;
+        }
+        else if(logedInProfile.pPhone === normalizePhone(phone.value)){
+            confirm('Use a different phone number from what you currently have');
+            return;
+        }
         updateUserProfile();
         updateLoggedInProfile();
         window.location.replace('profile-page.html');

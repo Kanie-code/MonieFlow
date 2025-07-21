@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded' , () => {
     const confirmBtn = document.getElementById('confirmBtn');
     let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
 
+    input.focus();
+
     image.src = logedInProfile.pImage;
     balance.textContent += logedInProfile.pBalance;
     name.textContent = logedInProfile.pFirstName + ' ' + logedInProfile.pLastName;

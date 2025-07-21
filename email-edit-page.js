@@ -9,12 +9,17 @@ document.addEventListener('DOMContentLoaded' , () => {
         return;
     }
 
+    email.focus();
 
     doneBtn.addEventListener('click' , () => {
-            if (!email.checkValidity()) {
-                email.reportValidity();
-                return;
-            }
+        if (!email.checkValidity()) {
+            email.reportValidity();
+            return;
+        }
+        else if(logedInProfile.pEmail === email.value){
+            confirm('Use a different email from what you currently have');
+            return;
+        }
         updateUserProfile();
         updateLoggedInProfile();
         window.location.replace('profile-page.html');

@@ -9,11 +9,18 @@ document.addEventListener('DOMContentLoaded' , () => {
         return;
     }
 
+    userName.focus();
+
+
     doneBtn.addEventListener('click' , () => {
-         if (!userName.checkValidity()) {
-                userName.reportValidity();
-                return;
-            }
+        if (!userName.checkValidity()) {
+            userName.reportValidity();
+            return;
+        }
+        else if(logedInProfile.pUserName === userName.value){
+            confirm('Choose a different username from what you currently have');
+            return;
+        }
         updateUserProfile();
         updateLoggedInProfile();
         window.location.replace('profile-page.html');
