@@ -5,12 +5,20 @@ document.addEventListener('DOMContentLoaded' , () => {
     const balanceStars = document.getElementById('balanceStars');
     const img = document.getElementById('img');
     const greeting = document.getElementById('greeting');
+    const withdraw = document.getElementById('withdraw');
+    const getCash = document.getElementById('getCash');
+    const depositCash = document.getElementById('depositCash');
     let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
 
     if(!logedInProfile){
         window.location.href = 'login.html';
         return;
     }
+
+
+        depositCash.addEventListener('click' , () => {
+            window.location.href = 'deposit-cash-page.html'
+        })
 
         greeting.textContent += ' ' + logedInProfile.pFirstName;
         img.src = logedInProfile.pImage;

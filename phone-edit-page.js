@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded' , () => {
         return;
     }
 
+    function normalizePhone(phone) {
+            let digits = phone.replace(/\D/g, '');
+            return digits.slice(-10);
+        }
+
+
     doneBtn.addEventListener('click' , () => {
          if (!phone.checkValidity()) {
                 phone.reportValidity();
@@ -23,12 +29,12 @@ document.addEventListener('DOMContentLoaded' , () => {
         targetProfile = profiles.find(profile => 
             logedInProfile.pPassword === profile.pPassword && logedInProfile.pUserName ===profile.pUserName
         )
-        targetProfile.pPhone = phone.value;
+        targetProfile.pPhone = normalizePhone(phone.value);
         localStorage.setItem('profiles-created' , JSON.stringify(profiles));
     }
 
     function updateLoggedInProfile () {
-        logedInProfile.pPhone = phone.value;
+        logedInProfile.pPhone = normalizePhone(phone.value);
         localStorage.setItem('target-profile' , JSON.stringify(logedInProfile));
     }
 })

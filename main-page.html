@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
+        if(!logedInProfile){
+            window.location.href = 'login.html';
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -18,7 +24,7 @@
             <div class="Profile-area">
                 <div class="profile-top">
                     <div style="display: flex; align-items: center; gap: 15px;">
-                        <img id="img" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <img id="img" style="width: 50px; border: 3px solid grey; height: 50px; border-radius: 50%;">
                         <div id="welcomeMessage">Welcome</div>
                     </div>
                     <div style="display: flex; gap: 25px;">
@@ -35,77 +41,76 @@
                         <div id="balanceStars">****</div>
                     </div>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 18px;">
-                    <div>Transaction History ></div>
-                    <button>Deposit+</button>
+                <div style="display: flex; flex-direction: column; gap: 18px; text-align: right;">
+                    <div style="font-size: 0.9em; cursor: pointer;">Transaction History ></div>
+                    <button style="cursor: pointer;">Deposit+</button>
                 </div>
             </div>
             <div class="actions-area">
-                <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
-                    <div><i class="fas fa-wallet"></i><i class="fas fa-arrow-up"></i></div>
+                <div id="depositCash" class="deposit-cash">
+                    <div><i class="fas fa-wallet"></i><i style="font-size: 0.9em;" class="fas fa-arrow-right"></i></div>
                     <div>Deposit Cash</div>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
+                <div id="getCash">
                     <div><i class="fas fa-hand-holding-usd"></i></div>
                     <div>Get Cash</div>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 18px; text-align: center;">
-                    <div><i class="fas fa-wallet"></i><i class="fas fa-arrow-down"></i></div>
+                <div id="withdraw">
+                    <div><i class="fas fa-wallet"></i><i style="font-size: 0.9em;" class="fas fa-arrow-left"></i></div>
                     <div>Withdraw</div>
                 </div>
             </div>
             <div class="services-area">
-                <div style=" display: flex; justify-content: space-between; flex-direction: column;">
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                <div class="column">
+                    <div>
                         <div><i class="fas fa-signal"></i></div>
                         <div>Airtime</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-wifi"></i></div>
                         <div>Data</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-tv"></i></i></div>
                         <div>TV</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-piggy-bank"></i></div>
                         <div>Save</div>
                     </div>
                 </div>
-                <div style=" display: flex; justify-content: space-between; flex-direction: column;">
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                <div class="column">
+                    <div>
                         <div><i class="fas fa-football-ball"></i></div>
                         <div>Betting</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-bolt"></i></div>
                         <div>Eletricity</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-plane"></i></div>
                         <div>Flight</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-shopping-cart"></i></div>
                         <div>Shop</div>
                     </div>
                 </div>
-                <div style=" display: flex; justify-content: space-between; flex-direction: column;
-                gap: 55px;">
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                <div class="column">
+                    <div>
                         <div><i class="fas fa-bullhorn"></i></div>
                         <div>Refer</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-credit-card"></i></div>
                         <div>Ticket</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-trash"></i></div>
                         <div>Waste bill</div>
                     </div>
-                    <div style="display: flex; flex-direction: column; text-align: center;">
+                    <div>
                         <div><i class="fas fa-list"></i></div>
                         <div>More</div>
                     </div>

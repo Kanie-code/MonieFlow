@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container {
+    max-width: 550px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0px;
+    background-image: linear-gradient(to top , #49accf, #0c93c4);
+}
+.top > div {
+    margin: 0 15px;
+}
+img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid grey;
+}
+.image-area {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.image-area > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.inner-container {
+    background-image: linear-gradient(to top , #99C9DB , #49accf);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 25px;
+    border-radius: 10px;
+}
+.input-area{
+    display: flex;
+    margin-top: 15px;
+}
+input{
+    border: 0;
+    width: 100%;
+    font-size: 1.3em;
+    background-color: transparent;
+    outline: 0;
+}
+.inner-container button {
+    width: 95px;
+    height: 40px;
+    border-radius: 6px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.119);
+    cursor: pointer;
+}
+.inner-container button:hover {
+    transform: scale(0.85);
+}
+.btn-area > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+.input-area > div {
+    font-size: 1.4em;
+}
+.top :last-child {
+    background-color: rgba(0, 0, 0, 0.279);
+    padding: 9px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.top :last-child:hover {
+    transform: scale(0.9);
+}
+.confirm-btn {
+    display: block;
+    margin: 70px auto auto auto;
+    width: 45%;
+    justify-content: center;
+    height: 45px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #99C9DB;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+hr {
+    border: 0.5px solid rgba(0, 0, 0, 0.49);
+}
+.confirm-btn:hover {
+    transform: scale(0.9);
+}

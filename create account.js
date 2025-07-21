@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pPhone: normalizePhone(phone.value),
                 pImage: 'blank-pic.webp', // Default image
                 pImageAdded: 'no',
-                pBalance: 0.00
+                pBalance: (0).toFixed(2)
             };
 
             incompleteProfile.push(profileItems);

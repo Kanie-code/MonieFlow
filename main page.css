@@ -50,17 +50,66 @@ body{
     display: flex;
     margin: 20px 5px 0 5px;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     background-image: linear-gradient(to top , #99C9DB , #85C4DA);
     border-radius: 15px;
+}
+.actions-area > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.11);
+  border-radius: 10px;
+  width: 100px;
+  justify-content: center;
+  cursor: pointer;
+}
+.actions-area > div:hover {
+  transform: scale(0.9);
+}
+.deposit-cash :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+#withdraw :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.actions-area i {
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.874);
 }
 .services-area {
   display: flex;
   justify-content: space-between;
   margin: 20px 5px 75px 5px;
-  padding: 20px;
+  padding: 10px;
   background-image: linear-gradient(to top , #e0e7ea , #99C9DB);
   border-radius: 15px;
+}
+.services-area .column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 55px;
+}
+.column > div{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.column > div:hover {
+  background-color: rgba(0, 0, 0, 0.162);
+  transform: scale(0.9);
 }
 button {
   width: 80px;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
+        if(!logedInProfile){
+            window.location.href = 'login.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="deposit-cash-page.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div id="helpBtn">Help</div>
+            <div id="getCashBtn">Get cash</div>
+        </div>
+        <div class="image-area">
+            <img id="image">
+            <div>
+                <div id="name"></div>
+                <div id="balance">₦</div>
+            </div>
+        </div>
+        <div class="inner-container">
+            <div>Amount</div>
+            <div class="input-area">
+                <div>₦</div>
+                <input id="input" placeholder="5,000 - 1,000,000">
+            </div>
+            <div><hr></div>
+            <div class="btn-area">
+                <div>
+                    <button id="btn5000">5,000</button>
+                    <button id="btn10000">10,000</button>
+                    <button id="btn20000">20,000</button>
+                </div>
+                <div>
+                    <button id="btn30000">30,000</button>
+                    <button id="btn40000">40,000</button>
+                    <button id="btn50000">50,000</button>
+                </div>
+                <div>
+                    <button id="btn100000">100,000</button>
+                    <button id="btn150000">150,000</button>
+                    <button id="btn200000">200,000</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="confirm-btn" id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+</body>
+<script src="deposit-cash-page.js"></script>
+</html>
