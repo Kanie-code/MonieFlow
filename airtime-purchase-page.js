@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     input.focus();
 
+    phoneInput.value = ('0' + logedInProfile.pPhone).replace(/^(\d{4})(\d{3})(\d{0,})$/, '$1 $2 $3').trim()
+
+    autoSwitchNetwork();
+
     contact.addEventListener('click' , () => {
         pickContact();
     })
@@ -50,7 +54,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
             console.log("Phone number selected:", phoneNumber);
 
-            document.querySelector('#phoneInput').value = phoneNumber;
+            phoneInput.value = phoneNumber;
         }
         } else {
             alert("Your browser does not support contact picking.");
@@ -58,6 +62,9 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
 
     phoneInput.addEventListener('input' , () => {
+        if(phoneInput.value.length === 14 && phoneInput.value.startsWith('+234')){
+            phoneInput.value = phoneInput.value.slice(4)
+        }
         if(phoneInput.value === ''){
             return;
         };
@@ -68,24 +75,20 @@ document.addEventListener('DOMContentLoaded' , () => {
 
         let oldPos = phoneInput.selectionStart;
 
-        // Save whether user was typing at the end
         let wasAtEnd = (oldPos === phoneInput.value.length);
 
-        // Format number: (split into parts with spaces)
         let formatted = rawValue
             .replace(/^(\d{4})(\d{3})(\d{0,})$/, '$1 $2 $3')
             .trim();
 
         phoneInput.value = formatted;
 
-        // Now handle caret:
+
         if (wasAtEnd) {
-            // User was typing at the end, keep it at the end
+
             phoneInput.selectionStart = phoneInput.selectionEnd = formatted.length;
         } else {
-            // User was editing in the middle, adjust caret
-
-            // Calculate how many spaces were added before old position
+    
             let spacesBefore = (phoneInput.value.slice(0, oldPos).match(/ /g) || []).length;
             let rawSpacesBefore = (rawValue.slice(0, oldPos).match(/ /g) || []).length;
 
@@ -98,12 +101,92 @@ document.addEventListener('DOMContentLoaded' , () => {
         if(phoneInput.value.length > 13){
             phoneInput.value = phoneInput.value.slice(0,13);
         }
+        if(phoneInput.value.length === 13){
+            autoSwitchNetwork();
+        }
     })
+
+    function getNetwork() {
+            let clean = phoneInput.value.replace(/\D/g, '');
+
+            if (clean.startsWith('234')) {
+                clean = '0' + clean.slice(3);
+            }
+
+            let prefix = clean.slice(0, 4);
+
+            const mtn = ['0803','0806','0703','0706','0813','0816','0810','0814','0903','0906','0913','0916'];
+            const airtel = ['0802','0808','0708','0701','0812','0902','0907','0901','0912'];
+            const glo = ['0805','0807','0705','0815','0811','0905','0915'];
+            const nineMobile = ['0809','0817','0818','0909','0908'];
+
+            if (mtn.includes(prefix)) return 'MTN';
+            if (airtel.includes(prefix)) return 'Airtel';
+            if (glo.includes(prefix)) return 'Glo';
+            if (nineMobile.includes(prefix)) return '9Mobile';
+
+            return 'Unknown Network';
+    }
 
     networksDown.addEventListener('click' , () => {
         networks.classList.toggle('click');
         networksDown.classList.toggle('clicked');
     });
+
+    function autoSwitchNetwork () {
+        if( getNetwork() === 'MTN'){
+        if(!inputMTN.checked){
+            inputMTN.click();
+        }
+        uncheck(inputAirtel);
+        uncheck(inputGlo);
+        uncheck(input9Mobile);
+        selectedNetworkImage.src = 'mtn-logo.jpg';
+        networks.classList.remove('click');
+        networksDown.classList.remove('clicked');
+    };
+
+    if( getNetwork() === 'Airtel'){
+        if(!inputAirtel.checked){
+            inputAirtel.click();
+        }
+        uncheck(inputMTN);
+        uncheck(inputGlo);
+        uncheck(input9Mobile);
+        selectedNetworkImage.src = 'airtel-logo.png';
+        networks.classList.remove('click');
+        networksDown.classList.remove('clicked');
+    }
+
+    if( getNetwork() === 'Glo'){
+        if(!inputGlo.checked){
+            inputGlo.click();
+        }
+        uncheck(inputMTN);
+        uncheck(inputAirtel);
+        uncheck(input9Mobile);
+        selectedNetworkImage.src = 'glo-logo.jpg';
+        networks.classList.remove('click');
+        networksDown.classList.remove('clicked');
+    }
+
+    if( getNetwork() === '9mobile'){
+        if(!input9Mobile.checked){
+            input9Mobile.click();
+        }
+        uncheck(inputAirtel);
+        uncheck(inputGlo);
+        uncheck(inputMTN);
+        selectedNetworkImage.src = '9mobile-logo.jpg';
+        networks.classList.remove('click');
+        networksDown.classList.remove('clicked');
+    }
+
+    if( getNetwork() === 'Unknown Network'){
+        confirm('select your network provider');
+    }
+
+    }
 
     mtn.addEventListener('click' , () => {
         if(!inputMTN.checked){
