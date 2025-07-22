@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded' , () => {
     const name = document.getElementById('name');
     const balance = document.getElementById('balance');
-    const getCashBtn = document.getElementById('getCashBtn');
     const helpBtn = document.getElementById('helpBtn');
     const input = document.getElementById('input');
     const image = document.getElementById('image');
@@ -16,6 +15,20 @@ document.addEventListener('DOMContentLoaded' , () => {
     const btn200000 = document.getElementById('btn200000');
     const confirmBtn = document.getElementById('confirmBtn');
     let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
+
+    if(document.getElementById('depositCashBtn')) {
+        const depositCashBtn = document.getElementById('depositCashBtn');
+        depositCashBtn.addEventListener('click' , () => {
+            window.location.href = 'deposit-cash-page.html';
+        })
+    }
+
+    if(document.getElementById('getCashBtn')){
+        const getCashBtn = document.getElementById('getCashBtn');
+        getCashBtn.addEventListener('click' , () => {
+            window.location.href = 'get-cash-page.html';
+        })
+    }
 
     input.focus();
 

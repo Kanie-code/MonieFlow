@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
+        if(!logedInProfile){
+            window.location.href = 'login.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="airtime-purchase-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div id="dataBtn">Data</div>
+            <div id="historyBtn">history</div>
+        </div>
+        <div class="image-area">
+            <img id="image">
+            <div>
+                <div id="name"></div>
+                <div id="balance">₦</div>
+            </div>
+        </div>
+        <div class="number-input">
+            <div class="first">
+                <img src="glo-logo.jpg" id="selectedNetworkImage">
+                <i id="networksDown" class="fas fa-chevron-down"></i>
+            </div>
+            <div class="v-line"><hr></div>
+            <div class="second">
+                <div style="display: flex; gap: 10px;">
+                    <input type="number" placeholder="0XXX XXX XXX">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="networks" id="networks">
+                <div id="mtn">
+                    <div>
+                        <img src="mtn-logo.jpg">
+                        <div>MTN</div>
+                    </div>
+                    <input type="checkbox" id="inputMTN">
+                </div>
+                <div id="airtel">
+                    <div>
+                        <img src="airtel-logo.png">
+                        <div>Airtel</div>
+                    </div>
+                    <input type="checkbox" id="inputAirtel">
+                </div>
+                <div id="glo">
+                    <div>
+                        <img src="glo-logo.jpg">
+                        <div>Glo</div>
+                    </div>
+                    <input type="checkbox" id="inputGlo">
+                </div>
+                <div id="mobile9">
+                    <div>
+                        <img src="9mobile-Logo.jpg">
+                        <div>9Mobile</div>
+                    </div>
+                    <input type="checkbox" id="input9Mobile">
+                </div>
+            </div>
+            <div class="h-line"><hr></div>
+        </div>
+        <div class="inner-container">
+            <div>Amount</div>
+            <div class="input-area">
+                <div>₦</div>
+                <input id="input" placeholder="50 - 500,000">
+            </div>
+            <div><hr></div>
+            <div class="btn-area">
+                <div>
+                    <button id="btn50">₦50</button>
+                    <button id="btn100">₦100</button>
+                    <button id="btn200">₦200</button>
+                </div>
+                <div>
+                    <button id="btn500">₦500</button>
+                    <button id="btn1000">₦1,000</button>
+                    <button id="btn2000">₦2,000</button>
+                </div>
+                <div>
+                    <button id="btn3000">₦3,000</button>
+                    <button id="btn4000">₦4,000</button>
+                    <button id="btn5000">₦5,000</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="confirm-btn" id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+</body>
+<script src="airtime-purchase-page.js"></script>
+</html>

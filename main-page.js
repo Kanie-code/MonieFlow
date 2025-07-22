@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     const withdraw = document.getElementById('withdraw');
     const getCash = document.getElementById('getCash');
     const depositCash = document.getElementById('depositCash');
+    const airtime = document.getElementById('airtime');
     let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
 
     if(!logedInProfile){
@@ -16,8 +17,17 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
 
 
+
+        airtime.addEventListener('click' , () => {
+            window.location.href = 'airtime-purchase-page.html'
+        })
+
         depositCash.addEventListener('click' , () => {
             window.location.href = 'deposit-cash-page.html'
+        });
+
+        getCash.addEventListener('click' , () => {
+            window.location.href = 'get-cash-page.html'
         })
 
         greeting.textContent += ' ' + logedInProfile.pFirstName;
