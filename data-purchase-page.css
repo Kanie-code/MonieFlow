@@ -6,7 +6,7 @@ body{
 }
 .container {
     max-width: 550px;
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -52,43 +52,7 @@ body{
     margin: 15px 18px;
     border-radius: 10px;
     width: 90%;
-}
-.input-area{
-    display: flex;
-    margin-top: 15px;
-}
-.input-area input {
-    border: 0;
-    width: 100%;
-    font-size: 1.3em;
-    background-color: transparent;
-    outline: 0;
-}
-.inner-container button {
-    width: auto;
-    min-width: 70px;
-    height: 40px;
-    border-radius: 6px;
-    border: 0;
-    background-color: rgba(0, 0, 0, 0.119);
-    cursor: pointer;
-}
-.inner-container button:hover {
-    transform: scale(0.85);
-}
-.btn-area > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.btn-area {
-    display: flex;
-    flex-direction: column;
     gap: 20px;
-    margin-top: 10px;
-}
-.input-area > div {
-    font-size: 1.4em;
 }
 .top :last-child {
     background-color: rgba(0, 0, 0, 0.279);
@@ -98,22 +62,6 @@ body{
 }
 .top :last-child:hover {
     transform: scale(0.9);
-}
-.confirm-btn {
-    margin: 70px auto auto auto;
-    display: block;
-    width: 45%;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    border-radius: 15px;
-    border: 0;
-    background-color: #d8f1fa;
-    cursor: pointer;
-    font-size: 1.1em;
-}
-.button{
-    width: 100%;
 }
 .inner-container hr {
     border: 0.5px solid rgba(0, 0, 0, 0.49);
@@ -193,10 +141,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.networks > div:hover{
+    background-color: rgba(0, 0, 0, 0.245);
 }
 .networks > div > div {
     display: flex;
     align-items: center;
+    margin: 10px 0 10px 10px;
 }
 .networks {
     display: flex;
@@ -213,13 +167,10 @@ body{
     visibility: hidden;
     transition: all 0.5s ease;
 }
-.click {
+.number-input .click {
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease;
-}
-.networks > div > div {
-    margin: 10px 0 10px 10px;
 }
 .number-input .networks input {
     padding: 0;
@@ -244,8 +195,93 @@ body{
 #networksDown {
     color: gray;
     transition: all 0.5s ease;
+    cursor: pointer;
+
 }
 .first .clicked {
     transform: rotate(180deg);
     transition: all 0.5s ease;
+}
+.data-plan-headings {
+    display: flex;
+    gap: 30px;
+    overflow: auto;
+    white-space: nowrap;
+}
+.data-plan-headings > div {
+    cursor: pointer;
+}
+.data-plan-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 3% 4%;
+}
+.data-plan-row > div {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.205);
+    width: 50px;
+}
+.data-plans-area {
+    font-size: 0.9em;
+}
+.data-plan-row > div > div {
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+.airtel-data-plans {
+    display: none;
+}
+.glo-data-plans {
+    display: none;
+}
+.mtn-data-plans {
+    display: none;
+}
+.mobile9-data-plans {
+    display: none;
+}
+.inner-container > .clicked {
+    display: block;
+}
+.data-amount {
+font-size: 1.2em;
+}
+.airtel-data-plans .data-plans-area > div {
+    display: none;
+}
+.airtel-data-plans .data-plans-area .clicked{
+    display: block;
+}
+.data-plan-headings .clicked::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 0px;
+    width: 20px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(65, 64, 64);
+}
+.data-plan-headings .clicked{
+    font-weight: bolder;
+}
+.glo-data-plans .data-plans-area > div {
+    display: none;
+}
+.glo-data-plans .data-plans-area .clicked {
+    display: block;
+}
+.mtn-data-plans .data-plans-area > div {
+    display: none;
+}
+.mtn-data-plans .data-plans-area .clicked {
+    display: block;
+}
+.mobile9-data-plans .data-plans-area > div {
+    display: none;
+}
+.mobile9-data-plans .data-plans-area .clicked {
+    display: block;
 }

@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
+        if(!logedInProfile){
+            window.location.href = 'login.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="data-purchase-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div id="dataBtn">Data</div>
+            <div id="historyBtn">history</div>
+        </div>
+        <div class="image-area">
+            <img id="image">
+            <div>
+                <div id="name"></div>
+                <div id="balance">₦</div>
+            </div>
+        </div>
+        <div class="number-input">
+            <div class="first">
+                <img id="selectedNetworkImage">
+                <i id="networksDown" class="fas fa-chevron-down"></i>
+            </div>
+            <hr class="v-line">
+            <div class="second">
+                <div style="display: flex; gap: 10px;">
+                    <input type="tel" placeholder="0XXX XXX XXXX" id="phoneInput">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <i class="fas fa-user" id="contact"></i>
+            </div>
+            <div class="networks" id="networks">
+                <div id="mtn">
+                    <div>
+                        <img src="mtn-logo.jpg">
+                        <div>MTN</div>
+                    </div>
+                    <input type="checkbox" id="inputMTN">
+                </div>
+                <div id="airtel">
+                    <div>
+                        <img src="airtel-logo.png">
+                        <div>Airtel</div>
+                    </div>
+                    <input type="checkbox" id="inputAirtel">
+                </div>
+                <div id="glo">
+                    <div>
+                        <img src="glo-logo.jpg">
+                        <div>Glo</div>
+                    </div>
+                    <input type="checkbox" id="inputGlo">
+                </div>
+                <div id="mobile9">
+                    <div>
+                        <img src="9mobile-Logo.jpg">
+                        <div>9Mobile</div>
+                    </div>
+                    <input type="checkbox" id="input9Mobile">
+                </div>
+            </div>
+            <div class="h-line"><hr></div>
+        </div>
+        <div class="inner-container">
+            <div>
+                Data plans
+            </div>
+            <div class="airtel-data-plans" id="airtelDataPlans">
+                <div class="data-plan-headings">
+                    <div id="airtelOffers" class="clicked">Offers</div>
+                    <div id="airtelDaily">Daily</div>
+                    <div id="airtelWeekly">Weekly</div>
+                    <div id="airtelMonthly">Monthly</div>
+                    <div id="airtelMonthPlus">Months+</div>
+                    <div id="airtelSocial">Social</div>
+                    <div id="airtelNight">Night</div>
+                    <div id="airtelRounter">Router/MiFi</div>
+                    <div id="airtelOthers">Others</div>
+                </div>
+                <div class="data-plans-area">
+                    <div class="offers-plan clicked" id="airtelOffersPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1GB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1000</div>
+                                <div>3.2GB</div>
+                                <div>2 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>5GB</div>
+                                <div>2 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦2,500</div>
+                                <div>6GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,000</div>
+                                <div>10GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>12GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>18GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-plan" id="airtelDailyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦75</div>
+                                <div>75MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>110MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>230MB</div>
+                                <div>2 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦300</div>
+                                <div>300MB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1GB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦600</div>
+                                <div>1.5GB</div>
+                                <div>2 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦750</div>
+                                <div>2GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>3.2GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>5GB</div>
+                                <div>2 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="night-plan" id="airtelNightPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦50</div>
+                                <div>250MB</div>
+                                <div>1 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekly-plan" id="airtelWeeklyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>500MB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦800</div>
+                                <div>1GB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>1.5GB</div>
+                                <div>7 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>1GB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,500</div>
+                                <div>6GB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,000</div>
+                                <div>10GB</div>
+                                <div>7 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>18GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthly-plan" id="airtelMonthlyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>2GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>3GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,500</div>
+                                <div>4GB</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦3,000</div>
+                                <div>8GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦4,000</div>
+                                <div>10GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>13GB</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦6,000</div>
+                                <div>18GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦8,000</div>
+                                <div>25GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦10,000</div>
+                                <div>35GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 4">
+                            <div>
+                                <div></div>
+                                <div>₦15,000</div>
+                                <div>60GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦20,000</div>
+                                <div>100GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦30,000</div>
+                                <div>160GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthplus-plan" id="airtelMonthPlusPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦50,000</div>
+                                <div>300GB</div>
+                                <div>90 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦60,000</div>
+                                <div>350GB</div>
+                                <div>120 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦100,000</div>
+                                <div>680GB</div>
+                                <div>365 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-plan" id="airtelSocialPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>200MB</div>
+                                <div>2 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦300</div>
+                                <div>1GB</div>
+                                <div>3 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1.5GB</div>
+                                <div>7 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="router-mifi-plan" id="airtelRouterPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦20,000</div>
+                                <div>100GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦50,000</div>
+                                <div>UNLIMITED</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦30,000</div>
+                                <div>UNLIMITED</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>13GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦10,000</div>
+                                <div>35GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦15,000</div>
+                                <div>60GB</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="others-plan" id="airtelOthersPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>400MB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>1.2GB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>2.5GB</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>12GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>10 mins</div>
+                                <div>3 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>20 mins</div>
+                                <div>7 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦300</div>
+                                <div>30 mins</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>50 mins</div>
+                                <div>14 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>100 mins</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 4">
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>150 mins</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="glo-data-plans" id="gloDataPlans">
+                <div class="data-plan-headings">
+                    <div id="gloOffers" class="clicked">Offers</div>
+                    <div id="gloDaily">Daily</div>
+                    <div id="gloWeekly">Weekly</div>
+                    <div id="gloMonthly">Monthly</div>
+                    <div id="gloMega">Mega</div>
+                    <div id="gloAlwaysOn">Always-On</div>
+                    <div id="gloSocial">Social</div>
+                    <div id="gloNight">Night</div>
+                    <div id="gloWeekend">Weekend</div>
+                    <div id="gloHourly">Hourly</div>
+                    <div id="gloCampus">Campus</div>
+                    <div id="gloSpecial">Special</div>
+                    <div id="gloOthers">Others</div>
+                </div>
+                <div class="data-plans-area">
+                    <div class="offers-plan clicked" id="gloOffersPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦285</div>
+                                <div>1GB</div>
+                                <div>3 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦333</div>
+                                <div>1GB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦855</div>
+                                <div>3GB</div>
+                                <div>3 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦930</div>
+                                <div>2GB</div>
+                                <div>21 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦998</div>
+                                <div>3GB</div>
+                                <div>14 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>6.1GB</div>
+                                <div>15 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦3,500</div>
+                                <div>15GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>30GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦7,000</div>
+                                <div>45GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-plan" id="gloDailyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦50</div>
+                                <div>45MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>105MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>235MB</div>
+                                <div>2 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="night-plan" id="gloNightPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦60</div>
+                                <div>350MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦120</div>
+                                <div>250MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦333</div>
+                                <div>1GB</div>
+                                <div>14 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦998</div>
+                                <div>3GB</div>
+                                <div>14 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,663</div>
+                                <div>5GB</div>
+                                <div>14 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,325</div>
+                                <div>10GB</div>
+                                <div>14 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekly-plan" id="gloWeeklyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1.5GB</div>
+                                <div>7 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦250</div>
+                                <div>500MB</div>
+                                <div>14 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦750</div>
+                                <div>1.1GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>8.5GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>20GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthly-plan" id="gloMonthlyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦470</div>
+                                <div>1GB</div>
+                                <div>21 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦930</div>
+                                <div>2GB</div>
+                                <div>21 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>2.6GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦1,350</div>
+                                <div>3GB</div>
+                                <div>21 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,400</div>
+                                <div>5GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>5GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>6.15GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,500</div>
+                                <div>7.25GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,000</div>
+                                <div>10GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 4">
+                            <div>
+                                <div></div>
+                                <div>₦4,000</div>
+                                <div>12GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>16GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦6,000</div>
+                                <div>20.5GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 5">
+                            <div>
+                                <div></div>
+                                <div>₦8,000</div>
+                                <div>28GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦10,000</div>
+                                <div>38GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦15,000</div>
+                                <div>64GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 6">
+                            <div>
+                                <div></div>
+                                <div>₦20,000</div>
+                                <div>107GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mega-plan" id="gloMegaPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦25,000</div>
+                                <div>135GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦30,000</div>
+                                <div>165GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦40,000</div>
+                                <div>220GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦50,000</div>
+                                <div>310GB</div>
+                                <div>60 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦60,000</div>
+                                <div>355GB</div>
+                                <div>90 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦75,000</div>
+                                <div>475GB</div>
+                                <div>90 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦150,000</div>
+                                <div>1000GB</div>
+                                <div>365 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-plan" id="gloSocialPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦50</div>
+                                <div>135MB</div>
+                                <div>3 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>335MB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦300</div>
+                                <div>1.1GB</div>
+                                <div>10 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1.8GB</div>
+                                <div>15 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="special-plan" id="gloSpecialPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦350</div>
+                                <div>1GB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>2GB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦600</div>
+                                <div>3.55GB</div>
+                                <div>2 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>5.1GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>5.9GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>6GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campus-plan" id="gloCampusPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>200MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>445MB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>2GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>4.2GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>9.8GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>30GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekend-plan" id="gloWeekendPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>875MB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>2.5GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>875MB</div>
+                                <div>2 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hourly-plan" id="gloHourlyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>500MB</div>
+                                <div>1 hour</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦300</div>
+                                <div>1GB</div>
+                                <div>2 hour</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>500MB</div>
+                                <div>1 hour</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="always-on-plan" id="gloAlwaysOnPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>6.1GB</div>
+                                <div>15 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,500</div>
+                                <div>15GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>30GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦7,000</div>
+                                <div>45GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mtn-data-plans" id="mtnDataPlans">
+                <div class="data-plan-headings">
+                    <div id="mtnOffers" class="clicked">Offers</div>
+                    <div id="mtnDaily">Daily</div>
+                    <div id="mtnWeekly">Weekly</div>
+                    <div id="mtnMonthly">Monthly</div>
+                    <div id="mtnXtraValue">Xtra-value</div>
+                    <div id="mtnBroadband">Broadband</div>
+                </div>
+                <div class="data-plans-area">
+                    <div class="offers-plan clicked" id="mtnOffersPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1GB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦900</div>
+                                <div>2GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>500MB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦800</div>
+                                <div>1GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦750</div>
+                                <div>2.5GB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>2GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦2,500</div>
+                                <div>3.5GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>20GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦7,500</div>
+                                <div>20GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-plan" id="mtnDailyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>110MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦350</div>
+                                <div>500MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1GB</div>
+                                <div>1 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦600</div>
+                                <div>1.5GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦750</div>
+                                <div>2.5GB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦750</div>
+                                <div>2GB</div>
+                                <div>2 DayS</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦900</div>
+                                <div>2.5GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>3.2GB</div>
+                                <div>2 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>1GB</div>
+                                <div>1 Day</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekly-plan" id="mtnWeeklyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>500MB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦800</div>
+                                <div>1GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦1,000</div>
+                                <div>1.5GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>3.5GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,500</div>
+                                <div>6GB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,500</div>
+                                <div>11GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦5,500</div>
+                                <div>12.5GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthly-plan" id="mtnMonthlyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦1,500</div>
+                                <div>2GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,000</div>
+                                <div>2.7GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦2,000</div>
+                                <div>2.7GB</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦2,500</div>
+                                <div>3.5GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦4,500</div>
+                                <div>10GB</div>
+                                <div>30 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,500</div>
+                                <div>12.5GB</div>
+                                <div>30 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦6,500</div>
+                                <div>16.5GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦7,500</div>
+                                <div>20GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦9,000</div>
+                                <div>25GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 4">
+                            <div>
+                                <div></div>
+                                <div>₦11,000</div>
+                                <div>36GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦16,000</div>
+                                <div>65GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦18,000</div>
+                                <div>75GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 5">
+                            <div>
+                                <div></div>
+                                <div>₦35,000</div>
+                                <div>165GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦40,000</div>
+                                <div>150GB</div>
+                                <div>60 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦90,000</div>
+                                <div>480GB</div>
+                                <div>90 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xtravalue-plan" id="mtnXtraValuePlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>600MB</div>
+                                <div>7 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦3,000</div>
+                                <div>2.7GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,500</div>
+                                <div>12.5GB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="broadband-plan" id="mtnBroadbandPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦9,000</div>
+                                <div>30GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦14,500</div>
+                                <div>60GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦24,000</div>
+                                <div>120GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦30,000</div>
+                                <div>150GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦37,500</div>
+                                <div>200GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦45,000</div>
+                                <div>260GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 3">
+                            <div>
+                                <div></div>
+                                <div>₦75,000</div>
+                                <div>450GB</div>
+                                <div>90 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦225,000</div>
+                                <div>1.5TB</div>
+                                <div>365 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦225,000</div>
+                                <div>1.5TB</div>
+                                <div>365 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile9-data-plans" id="mobile9DataPlans">
+                <div class="data-plan-headings">
+                    <div id="mobile9Offers" class="clicked">Offers</div>
+                    <div id="mobile9Daily">Daily</div>
+                    <div id="mobile9Monthly">Monthly</div>
+                </div>
+                <div class="data-plans-area">
+                    <div class="offers-plan clicked" id="mobile9OffersPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦50</div>
+                                <div>40MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>83MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>200MB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦500</div>
+                                <div>650MB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-plan" id="mobile9DailyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦50</div>
+                                <div>40MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦100</div>
+                                <div>83MB</div>
+                                <div>1 Day</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦150</div>
+                                <div>150MB</div>
+                                <div>1 Day</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦200</div>
+                                <div>200MB</div>
+                                <div>7 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monthly-plan" id="mobile9MonthlyPlan">
+                        <div class="data-plan-row 1">
+                            <div>
+                                <div></div>
+                                <div>₦3,000</div>
+                                <div>12GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦4,000</div>
+                                <div>18.5GB</div>
+                                <div>30 Days</div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div>₦5,000</div>
+                                <div>24GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                        <div class="data-plan-row 2">
+                            <div>
+                                <div></div>
+                                <div>₦10,000</div>
+                                <div>50GB</div>
+                                <div>30 Days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="data-purchase-page.js"></script>
+</html>
