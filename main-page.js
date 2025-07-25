@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     const getCash = document.getElementById('getCash');
     const depositCash = document.getElementById('depositCash');
     const airtime = document.getElementById('airtime');
+    const data = document.getElementById('data');
     let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
 
     if(!logedInProfile){
@@ -20,6 +21,10 @@ document.addEventListener('DOMContentLoaded' , () => {
 
         airtime.addEventListener('click' , () => {
             window.location.href = 'airtime-purchase-page.html'
+        })
+
+        data.addEventListener('click' , () => {
+            window.location.href = 'data-purchase-page.html'
         })
 
         depositCash.addEventListener('click' , () => {
