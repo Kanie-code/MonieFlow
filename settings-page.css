@@ -1,0 +1,71 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container {
+    max-width: 550px;
+    background-image: linear-gradient(to top, #e0e7ea, #0c93c4);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    min-height: 100vh;
+}
+.settings {
+    display: flex;
+    justify-content: center;
+    margin: 7px 0 20px 0;
+    font-size: 1.2em;
+}
+.container>div > :first-child{
+    font-weight: 900;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+}
+.container >:last-child {
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 6px;
+}
+.container>div > :first-child:hover {
+    background-color: rgba(0, 0, 0, 0.251);
+}
+.container>div > :nth-child(2) {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0 0 0 10px;
+    transition: all 0.5s ease;
+}
+.container > div >:nth-child(2) > div {
+    margin-top: 10px;
+}
+i {
+    margin-left: 15px;
+    color: gray;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+.clicked {
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+}
+.container>div > .show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.container>div > .show > div {
+    padding: 2px 0 2px 5px;
+    border-radius: 2px;
+}
+.container>div > .show > div:hover {
+    background-color: rgba(0, 0, 0, 0.251);
+}

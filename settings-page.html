@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let logedInProfile = JSON.parse(localStorage.getItem('target-profile'));
+        if(!logedInProfile){
+            window.location.href = 'login.html';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="settings-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="settings">Settings</div>
+        <div class="profile-settings">
+            <div id="profileSettings">Profile Settings<i class="fas fa-chevron-down"></i></div>
+            <div>
+                <div>Edit profile information</div>
+                <div>Edit Password</div>
+                <div>Temporarily disable account</div>
+                <div>Delete profile</div>
+            </div>
+        </div>
+        <div class="security-settings">
+            <div id="securitySettings">Security & Privacy <i class="fas fa-chevron-down"></i></div>
+            <div>
+                <div>Change PIN or Password</div>
+                <div>Enable 2FA(Two-Factor Authentification)</div>
+                <div>Set security questions</div>
+                <div>Toggle biometric login</div>
+            </div>
+        </div>
+        <div class="notification-settings">
+            <div id="notificationSettings">Notification/Alert<i class="fas fa-chevron-down"></i></div>
+            <div>
+                <div>Toggle push notification</div>
+                <div>Toggle Email or SMS alert</div>
+            </div>
+        </div>
+        <div class="safety-settings">
+            <div id="safetySettings">Reviews & Safety<i class="fas fa-chevron-down"></i></div>
+            <div>
+                <div>View reviews</div>
+                <div>Trusted Partners</div>
+            </div>
+        </div>
+        <div class="legal-settings">
+            <div id="legalSettings">Legal & Support<i class="fas fa-chevron-down"></i></div>
+            <div>
+                <div>Terms and Condition</div>
+                <div>Privacy Policy</div>
+                <div>Help/FAQ</div>
+                <div>Contact support</div>
+                <div>Report a problem</div>
+            </div>
+        </div>
+        <div>Dark mode</div>
+    </div>
+</body>
+<script src="settings-page.js"></script>
+</html>

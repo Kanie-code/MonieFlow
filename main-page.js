@@ -143,4 +143,8 @@ document.addEventListener('DOMContentLoaded' , () => {
             localStorage.removeItem('target-profile');
             window.location.href = 'login.html';
         })
+
+    settings.addEventListener('click' , () => {
+        window.location.href = 'settings-page.html'
+    })
 });

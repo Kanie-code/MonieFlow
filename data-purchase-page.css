@@ -53,6 +53,7 @@ body{
     border-radius: 10px;
     width: 90%;
     gap: 20px;
+    overflow: hidden;
 }
 .top :last-child {
     background-color: rgba(0, 0, 0, 0.279);
@@ -267,6 +268,16 @@ font-size: 1.2em;
 .data-plan-headings .clicked{
     font-weight: bolder;
 }
+/*.data-plans-area {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}*/
+/*.glo-data-plans .data-plans-area > div {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}*/
 .glo-data-plans .data-plans-area > div {
     display: none;
 }
